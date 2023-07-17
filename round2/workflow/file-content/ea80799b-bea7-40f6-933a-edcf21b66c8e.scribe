@@ -1,0 +1,6 @@
+resource "file-content" "ea80799b-bea7-40f6-933a-edcf21b66c8e" {
+  uuid = "ea80799b-bea7-40f6-933a-edcf21b66c8e"
+  content = "echo $(date)"
+  dateCreated = "2023-07-17T17:19:55.000Z"
+  lastUpdated = "2023-07-17T17:19:55.000Z"
+}
