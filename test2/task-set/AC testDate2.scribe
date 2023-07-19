@@ -1,7 +1,0 @@
-resource "task-set" "AC testDate2" {
-  name = "AC testDate2"
-  uuid = "0e8216de-77d5-4bf0-a95e-8aaf31c9d645"
-  dateCreated = "2023-07-17T17:20:24.000Z"
-  lastUpdated = "2023-07-17T17:20:24.000Z"
-  taskSetTasks = [ { uuid = "dcd5afff-3243-4404-b4b0-472e42a0b6ed" } ]
-}
