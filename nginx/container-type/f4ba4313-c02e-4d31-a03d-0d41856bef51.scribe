@@ -1,0 +1,39 @@
+resource "container-type" "f4ba4313-c02e-4d31-a03d-0d41856bef51" {
+  code = "f4ba4313-c02e-4d31-a03d-0d41856bef51"
+  name = "NGINX latest"
+  uuid = "59498571-f2c1-48ab-b66e-792f8d074eb4"
+  category = "nginx"
+  actions = [ { code = "generic-remove-node" } ]
+  certificateFile = "nginx"
+  certificatePath = "/etc/nginx/certs"
+  certificateStyle = "crt_key"
+  certificateWritePath = "/config/certs"
+  checkTypeCode = "webGetCheck"
+  containerLogs = [ { uuid = "6ed11276-4146-4846-b80b-f20bb4cde329" } ]
+  containerMounts = [ { uuid = "dc826d8b-f0d4-4935-9120-ba478b2f0dbb" } ]
+  containerPorts = [
+    { uuid = "51d13a18-6014-4291-87d9-d4f2b214ab41" },
+    { uuid = "af35db23-c021-4591-8aa4-8391f641b40a" }
+  ]
+  containerVersion = "latest"
+  entryPoint = ""
+  hasSslCert = true
+  labels = [ "qa" ]
+  logTypeCode = "vm"
+  mountConfig = "/etc/nginx"
+  mountData = "/var/www/html/"
+  mountLogs = "/var/log/nginx"
+  mountPoint = "/data"
+  provisionType = { code = "digitalocean" }
+  repositoryImage = ""
+  scripts = [
+    { code = "6764c99d-735b-4ac4-9dcf-e2058ef95293" },
+    { code = "a0387b80-b362-4f16-81e5-50b3c3066b7c" },
+    { code = "7cb10f27-8a54-408d-98a1-5711c0ab32d4" }
+  ]
+  serverType = "vm"
+  shortName = "nginx"
+  showServerLogs = true
+  statTypeCode = "vm"
+  virtualImage = { code = "digitalocean.image.morpheus.ubuntu.20.04" }
+}
