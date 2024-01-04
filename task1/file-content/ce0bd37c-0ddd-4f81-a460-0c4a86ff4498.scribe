@@ -1,0 +1,13 @@
+resource "file-content" "ce0bd37c-0ddd-4f81-a460-0c4a86ff4498" {
+  uuid = "ce0bd37c-0ddd-4f81-a460-0c4a86ff4498"
+  content = <<EOFSCRIBE
+echo "Printing Selected Varaiables....."
+echo "<%= customOptions.acCreateBackup %>"
+echo "<%= customOptions.acBackupType %>"
+echo "<%= customOptions.colorTA %>"
+
+
+EOFSCRIBE
+  dateCreated = "2023-11-30T19:21:10.000Z"
+  lastUpdated = "2023-11-30T19:55:30.000Z"
+}
