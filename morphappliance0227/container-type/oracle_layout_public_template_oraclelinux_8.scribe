@@ -1,0 +1,18 @@
+resource "container-type" "oracle.layout.public.template.oraclelinux.8" {
+  code = "oracle.layout.public.template.oraclelinux.8"
+  name = "Oracle Cloud Oracle Linux 8.3"
+  uuid = "eef9a71c-8065-4cf3-81c2-85f41ff83d55"
+  category = "oraclelinux"
+  checkTypeCode = "vmCheck"
+  commEnabled = true
+  commPort = 22
+  commType = "SSH"
+  containerVersion = "8"
+  entryPoint = "/bin/bash"
+  logTypeCode = "oraclelinux"
+  provisionType = { code = "oraclecloud" }
+  repositoryImage = "image"
+  shortName = "oraclelinux"
+  statTypeCode = "oraclelinux"
+  virtualImage = { uuid = "054f73ff-704c-4494-a0a2-da839ab2e638" }
+}
