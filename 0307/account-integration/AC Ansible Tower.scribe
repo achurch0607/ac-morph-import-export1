@@ -1,0 +1,8 @@
+resource "account-integration" "AC Ansible Tower" {
+  name = "AC Ansible Tower"
+  uuid = "6d249422-4e1d-4a3d-93d3-03e647cc1e2f"
+  integrationType = { code = "ansibleTower" }
+  serviceUrl = "https://10.32.21.193"
+  serviceVersion = "v2"
+  type = "ansibleTower"
+}
