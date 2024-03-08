@@ -6,16 +6,16 @@ resource "task" "ac ansible tower" {
   lastUpdated = "2024-03-08T18:04:36.000Z"
   options = [
     {
+      optionType = { code = "ansibleTowerInventoryId" }
+      value = { name = "AC GH" }
+    },
+    {
       optionType = { code = "ansibleTowerIntegrationId" }
       value = { name = "Ansible Tower" }
     },
     {
       optionType = { code = "ansibleTowerJobTemplateId" }
       value = { code = "ansibleTower.jobTemplate.1.49" }
-    },
-    {
-      optionType = { code = "ansibleTowerInventoryId" }
-      value = { name = "AC GH" }
     },
     {
       optionType = { code = "ansibleTowerExecuteMode" }
