@@ -1,0 +1,8 @@
+resource "account-integration" "AC GH" {
+  name = "AC GH"
+  uuid = "25741137-e50c-44a2-a3b1-c14e8499bb26"
+  category = "cm-server"
+  config = { cacheEnabled = false }
+  integrationType = { code = "github" }
+  type = "github"
+}
