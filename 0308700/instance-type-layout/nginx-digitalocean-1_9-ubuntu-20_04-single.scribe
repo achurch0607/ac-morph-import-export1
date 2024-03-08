@@ -1,7 +1,7 @@
 resource "instance-type-layout" "nginx-digitalocean-1.9-ubuntu-20.04-single" {
   code = "nginx-digitalocean-1.9-ubuntu-20.04-single"
   name = "DigitalOcean NGINX"
-  uuid = "ab760e91-adc8-4ca6-91e5-74944629ab45"
+  uuid = "f8151a38-7b92-44ea-9b39-b25dcce1323e"
   actions = [ { code = "nginx-1.9-add-node" } ]
   description = "This will provision a single process with no redundancy"
   hasAutoScale = true
