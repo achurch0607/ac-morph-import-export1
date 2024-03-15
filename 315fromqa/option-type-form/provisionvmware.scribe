@@ -1,0 +1,303 @@
+resource "option-type-form" "provisionvmware" {
+  code = "provisionvmware"
+  name = "Provision - VMware"
+  uuid = "cf61bd23-874d-45cf-b421-968e5e0dbada"
+  config = {
+    enableVar = ""
+    form = ""
+    formField = ""
+    formOptions = ""
+    formType = ""
+  }
+  field-groups = [
+    {
+      code = "b822e733-4c29-44cf-9e48-a9f41527d3bc"
+      name = "Provision"
+      collapsible = false
+      defaultCollapsed = false
+      options = [
+        {
+          code = "dbe736c1-218d-4f24-8b31-194ff8b5e78d"
+          name = "dbe736c1-218d-4f24-8b31-194ff8b5e78d"
+          uuid = "aa1677cd-38a0-4007-8472-3358b2d1db2f"
+          config = { addon = "", addonPosition = "" }
+          defaultValue = "2"
+          fieldContext = "config.customOptions"
+          fieldLabel = "Group"
+          fieldName = "group"
+          formField = true
+          refCode = "dbe736c1-218d-4f24-8b31-194ff8b5e78d"
+          type = "group"
+        },
+        {
+          code = "3e7f8269-e299-477b-8821-64b516e489e3"
+          name = "3e7f8269-e299-477b-8821-64b516e489e3"
+          uuid = "454ac7a8-4bfe-456e-b99c-4f29406a658b"
+          config = {
+            addonPosition = ""
+            cloudType = 5
+            filterResource = false
+            group = "dbe736c1-218d-4f24-8b31-194ff8b5e78d"
+            groupFieldType = "field"
+            groupId = ""
+            instanceType = ""
+            instanceTypeCode = ""
+            instanceTypeFieldCode = ""
+            instanceTypeFieldType = "field"
+          }
+          displayOrder = 1
+          fieldContext = "config.customOptions"
+          fieldLabel = "Cloud"
+          fieldName = "cloud"
+          formField = true
+          refCode = "3e7f8269-e299-477b-8821-64b516e489e3"
+          type = "cloud"
+        },
+        {
+          code = "33045695-a388-498f-bdb8-180aeeb732f3"
+          name = "33045695-a388-498f-bdb8-180aeeb732f3"
+          uuid = "c951b7f1-e2df-4326-9ef5-0408496a0992"
+          config = {
+            addon = ""
+            addonPosition = ""
+            cloudField = "3e7f8269-e299-477b-8821-64b516e489e3"
+            cloudFieldType = "field"
+            cloudId = ""
+            groupField = "dbe736c1-218d-4f24-8b31-194ff8b5e78d"
+            groupFieldType = "field"
+            groupId = ""
+            instanceTypeCode = ""
+            instanceTypeField = ""
+            instanceTypeFieldCode = ""
+            instanceTypeFieldType = "field"
+          }
+          displayOrder = 2
+          fieldContext = "config.customOptions"
+          fieldLabel = "Layout"
+          fieldName = "layout"
+          formField = true
+          refCode = "33045695-a388-498f-bdb8-180aeeb732f3"
+          type = "layout"
+        },
+        {
+          code = "f1aeb8f8-7684-4ee8-850f-e5231e78d77e"
+          name = "f1aeb8f8-7684-4ee8-850f-e5231e78d77e"
+          uuid = "564055fb-1568-483e-8a4f-acecea69a1cb"
+          config = {
+            addon = ""
+            addonPosition = ""
+            cloudField = "3e7f8269-e299-477b-8821-64b516e489e3"
+            cloudFieldType = "field"
+            cloudId = ""
+            defaultValue = ""
+            diskField = ""
+            groupField = "dbe736c1-218d-4f24-8b31-194ff8b5e78d"
+            groupFieldType = "field"
+            groupId = ""
+            layoutField = "33045695-a388-498f-bdb8-180aeeb732f3"
+            layoutFieldType = "field"
+            layoutId = ""
+            poolField = "df8ead5a-ed5f-4dff-980f-85665bab5419"
+            poolFieldType = "field"
+            poolId = ""
+            showPricing = false
+          }
+          displayOrder = 3
+          fieldContext = "config.customOptions"
+          fieldLabel = "Plan"
+          fieldName = "plan"
+          formField = true
+          refCode = "f1aeb8f8-7684-4ee8-850f-e5231e78d77e"
+          type = "plan"
+        },
+        {
+          code = "df8ead5a-ed5f-4dff-980f-85665bab5419"
+          name = "df8ead5a-ed5f-4dff-980f-85665bab5419"
+          uuid = "f2fdbae0-c5aa-46c6-a68b-ec1952edf121"
+          config = {
+            addon = ""
+            addonPosition = ""
+            cloudField = "3e7f8269-e299-477b-8821-64b516e489e3"
+            cloudFieldType = "field"
+            cloudId = ""
+            groupField = "dbe736c1-218d-4f24-8b31-194ff8b5e78d"
+            groupFieldType = "field"
+            groupId = ""
+            layoutField = "33045695-a388-498f-bdb8-180aeeb732f3"
+            layoutFieldType = "field"
+            layoutId = ""
+            planField = "f1aeb8f8-7684-4ee8-850f-e5231e78d77e"
+            planFieldType = "field"
+            planId = ""
+          }
+          displayOrder = 4
+          fieldContext = "config.customOptions"
+          fieldLabel = "Resource Pool"
+          fieldName = "resourcePool"
+          formField = true
+          refCode = "df8ead5a-ed5f-4dff-980f-85665bab5419"
+          required = true
+          type = "resourcePool"
+        },
+        {
+          code = "e59356d1-80b9-4873-a89b-c6e940618540"
+          name = "e59356d1-80b9-4873-a89b-c6e940618540"
+          uuid = "8e628a7d-2afd-4f8b-be97-00a1dbe4d008"
+          config = {
+            addon = ""
+            addonPosition = ""
+            cloudField = "3e7f8269-e299-477b-8821-64b516e489e3"
+            cloudFieldType = "field"
+            cloudId = ""
+            customMountsField = [
+              {
+                name = "Name"
+                id = 6510
+                type = "text"
+                value = "name"
+              }
+            ]
+            defaultValue = ""
+            enableDatastoreSelection = false
+            enableDiskTypeSelection = false
+            enableStorageTypeSelection = false
+            groupField = "dbe736c1-218d-4f24-8b31-194ff8b5e78d"
+            groupFieldType = "field"
+            groupId = ""
+            layoutField = "33045695-a388-498f-bdb8-180aeeb732f3"
+            layoutFieldType = "field"
+            layoutId = ""
+            planField = "f1aeb8f8-7684-4ee8-850f-e5231e78d77e"
+            planFieldType = "field"
+            planId = ""
+            poolField = "df8ead5a-ed5f-4dff-980f-85665bab5419"
+            poolFieldType = "field"
+            poolId = ""
+          }
+          displayOrder = 5
+          fieldContext = "config.customOptions"
+          fieldLabel = "Volumes"
+          fieldName = "volumes"
+          formField = true
+          refCode = "e59356d1-80b9-4873-a89b-c6e940618540"
+          type = "diskManager"
+        },
+        {
+          code = "2e47f14c-8891-483e-bf80-7f04e93d2ef1"
+          name = "2e47f14c-8891-483e-bf80-7f04e93d2ef1"
+          uuid = "984e4134-e23d-495e-8c98-8c6e2f7a7b72"
+          config = {
+            addon = ""
+            addonPosition = ""
+            cloudField = "3e7f8269-e299-477b-8821-64b516e489e3"
+            cloudFieldType = "field"
+            cloudId = ""
+            defaultValue = <<EOFSCRIBE
+[
+ {
+  "primaryInterface": true,
+  "ipMode": "",
+  "ipAddress": "",
+  "networkInterfaceTypeId": "",
+  "network": {
+   "id": "network-173431",
+   "pool": {
+    "id": "18823"
+   }
+  }
+ }
+]
+EOFSCRIBE
+            enableIPModeSelection = true
+            groupField = "dbe736c1-218d-4f24-8b31-194ff8b5e78d"
+            groupFieldType = "field"
+            groupId = ""
+            layoutField = "33045695-a388-498f-bdb8-180aeeb732f3"
+            layoutFieldType = "field"
+            layoutId = ""
+            planField = "f1aeb8f8-7684-4ee8-850f-e5231e78d77e"
+            planFieldType = "field"
+            planId = ""
+            poolField = "df8ead5a-ed5f-4dff-980f-85665bab5419"
+            poolFieldType = "field"
+            poolId = ""
+            showNetworkTypeSelection = true
+          }
+          displayOrder = 6
+          fieldContext = "config.customOptions"
+          fieldLabel = "Networks"
+          fieldName = "networks"
+          formField = true
+          refCode = "2e47f14c-8891-483e-bf80-7f04e93d2ef1"
+          required = true
+          type = "networkManager"
+        },
+        {
+          code = "25099656-07dc-40c8-844f-09167bf0baed"
+          name = "25099656-07dc-40c8-844f-09167bf0baed"
+          uuid = "81dd9878-0c47-4037-8e02-4f1f5bacde1a"
+          config = {
+            addon = ""
+            addonPosition = ""
+            cloudField = "3e7f8269-e299-477b-8821-64b516e489e3"
+            cloudFieldType = "field"
+            cloudId = ""
+            groupField = "dbe736c1-218d-4f24-8b31-194ff8b5e78d"
+            groupFieldType = "field"
+            groupId = ""
+            planField = "f1aeb8f8-7684-4ee8-850f-e5231e78d77e"
+            planFieldType = "field"
+            planId = ""
+          }
+          displayOrder = 7
+          fieldContext = "config.customOptions"
+          fieldLabel = "VMware Folder"
+          fieldName = "vmwareFolder"
+          formField = true
+          refCode = "25099656-07dc-40c8-844f-09167bf0baed"
+          type = "vmwFolders"
+        },
+        {
+          code = "48ff41b5-b989-4c7a-b7a4-e314a4335bc8"
+          name = "48ff41b5-b989-4c7a-b7a4-e314a4335bc8"
+          uuid = "49398294-0244-4435-90ae-1920a3325113"
+          config = { addonPosition = "", defaultValue = "" }
+          displayOrder = 8
+          fieldContext = "config.customOptions"
+          fieldLabel = "Ports"
+          fieldName = "ports"
+          formField = true
+          refCode = "48ff41b5-b989-4c7a-b7a4-e314a4335bc8"
+          type = "ports"
+        },
+        {
+          code = "af313df2-543e-44b9-a5d2-1d8e75fec310"
+          name = "af313df2-543e-44b9-a5d2-1d8e75fec310"
+          uuid = "0580c79f-ba03-4475-9e61-1564841092cb"
+          config = { addonPosition = "", defaultValue = "" }
+          displayOrder = 9
+          fieldContext = "config.customOptions"
+          fieldLabel = "Tags"
+          fieldName = "tags"
+          formField = true
+          refCode = "af313df2-543e-44b9-a5d2-1d8e75fec310"
+          type = "tag"
+        }
+      ]
+    }
+  ]
+  options = [
+    {
+      code = "name"
+      name = "Name"
+      uuid = "d2387e33-cd4b-4966-b0d3-a1e46c607414"
+      description = "Option type for catalog item"
+      exportMeta = true
+      fieldContext = "config.customOptions"
+      fieldLabel = "Name"
+      fieldName = "name"
+      labels = [ "auto", "export", "keep" ]
+      required = true
+    }
+  ]
+}
