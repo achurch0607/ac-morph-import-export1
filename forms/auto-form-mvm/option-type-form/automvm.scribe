@@ -1,0 +1,313 @@
+resource "option-type-form" "automvm" {
+  code = "automvm"
+  name = "Auto Form MVM"
+  uuid = "36033509-c1ac-42d8-b4b1-a87965c50418"
+  config = {
+    enableVar = false
+    form = ""
+    formField = ""
+    formOptions = ""
+    formType = "static"
+  }
+  description = "safe to delete"
+  field-groups = [
+    {
+      code = "b3952b02-1eb3-4bde-a007-13fc8c676344"
+      name = "Provision"
+      collapsible = false
+      defaultCollapsed = false
+      options = [
+        {
+          code = "45d5f2cc-90e4-4917-8736-9a846b6c0d1d"
+          name = "45d5f2cc-90e4-4917-8736-9a846b6c0d1d"
+          uuid = "93373947-2f78-42ef-a331-52bb0998757f"
+          config = {
+            addon = ""
+            addonPosition = ""
+            allowReadonly = false
+            retainDefault = false
+          }
+          defaultValue = "5073"
+          fieldContext = "config.customOptions"
+          fieldLabel = "Group"
+          fieldName = "group"
+          formField = true
+          refCode = "45d5f2cc-90e4-4917-8736-9a846b6c0d1d"
+          required = true
+          type = "group"
+        },
+        {
+          code = "9f9f3ed9-69ec-46b9-83ca-5d8337e03d36"
+          name = "9f9f3ed9-69ec-46b9-83ca-5d8337e03d36"
+          uuid = "1b9de284-2011-4364-ae47-69bc70ac76bc"
+          defaultValue = "dev"
+          displayOrder = 1
+          fieldContext = "config.customOptions"
+          fieldLabel = "Environment"
+          fieldName = "environment"
+          formField = true
+          refCode = "9f9f3ed9-69ec-46b9-83ca-5d8337e03d36"
+          type = "environment"
+        },
+        {
+          code = "0c320876-5e59-46e8-9d5c-43d2925d8bab"
+          name = "0c320876-5e59-46e8-9d5c-43d2925d8bab"
+          uuid = "63ec17b6-0849-4717-bced-768cc72c057f"
+          config = {
+            cloudType = "3"
+            filterResource = false
+            group = "45d5f2cc-90e4-4917-8736-9a846b6c0d1d"
+            groupFieldType = "field"
+            groupId = ""
+            instanceTypeCode = ""
+            instanceTypeFieldCode = ""
+            instanceTypeFieldType = "field"
+          }
+          defaultValue = "2843"
+          displayOrder = 2
+          fieldContext = "config.customOptions"
+          fieldLabel = "Cloud"
+          fieldName = "cloud"
+          formField = true
+          refCode = "0c320876-5e59-46e8-9d5c-43d2925d8bab"
+          required = true
+          type = "cloud"
+        },
+        {
+          code = "87fc38ff-4fe1-4ed9-be3a-e0cd5e20a820"
+          name = "87fc38ff-4fe1-4ed9-be3a-e0cd5e20a820"
+          uuid = "456bbd5e-b102-4f2f-940d-017b5b9b50fa"
+          config = {
+            cloudField = "0c320876-5e59-46e8-9d5c-43d2925d8bab"
+            cloudFieldType = "field"
+            cloudId = ""
+            groupField = "45d5f2cc-90e4-4917-8736-9a846b6c0d1d"
+            groupFieldType = "field"
+            groupId = ""
+            instanceTypeCode = "ubuntu"
+            instanceTypeFieldCode = null
+            instanceTypeFieldType = "value"
+          }
+          defaultValue = "1078"
+          displayOrder = 3
+          fieldContext = "config.customOptions"
+          fieldLabel = "Layout"
+          fieldName = "layout"
+          formField = true
+          refCode = "87fc38ff-4fe1-4ed9-be3a-e0cd5e20a820"
+          type = "layout"
+        },
+        {
+          code = "b455dc3a-5f0c-42d0-bd28-a0a187f074fa"
+          name = "b455dc3a-5f0c-42d0-bd28-a0a187f074fa"
+          uuid = "51e463a1-4251-43b1-af75-24ff352c58db"
+          config = {
+            addon = ""
+            addonPosition = ""
+            cloudField = "0c320876-5e59-46e8-9d5c-43d2925d8bab"
+            cloudFieldType = "field"
+            cloudId = ""
+            defaultValue = <<EOFSCRIBE
+{
+ "id": 6911,
+ "code": "kvm-custom",
+ "maxMemory": 1073741824,
+ "maxCores": "2",
+ "coresPerSocket": "2",
+ "maxCoresPerSocket": "2"
+}
+EOFSCRIBE
+            diskField = "6e09a796-1267-448f-a1cb-c0ed49298997"
+            groupField = "45d5f2cc-90e4-4917-8736-9a846b6c0d1d"
+            groupFieldType = "field"
+            groupId = ""
+            layoutField = "87fc38ff-4fe1-4ed9-be3a-e0cd5e20a820"
+            layoutFieldType = "field"
+            layoutId = ""
+            poolField = "f6ef04a5-1692-4709-b421-fcf738ea1f20"
+            poolFieldType = "field"
+            poolId = ""
+            retainDefault = false
+            showPricing = true
+          }
+          displayOrder = 4
+          fieldContext = "config.customOptions"
+          fieldLabel = "Plan"
+          fieldName = "plan"
+          formField = true
+          refCode = "b455dc3a-5f0c-42d0-bd28-a0a187f074fa"
+          type = "plan"
+        },
+        {
+          code = "f6ef04a5-1692-4709-b421-fcf738ea1f20"
+          name = "f6ef04a5-1692-4709-b421-fcf738ea1f20"
+          uuid = "23d6cda1-1eb9-4cb7-addc-56cac484b30b"
+          config = {
+            cloudField = "0c320876-5e59-46e8-9d5c-43d2925d8bab"
+            cloudFieldType = "field"
+            cloudId = ""
+            groupField = "45d5f2cc-90e4-4917-8736-9a846b6c0d1d"
+            groupFieldType = "field"
+            groupId = ""
+            layoutField = "87fc38ff-4fe1-4ed9-be3a-e0cd5e20a820"
+            layoutFieldType = "field"
+            layoutId = ""
+            planField = "b455dc3a-5f0c-42d0-bd28-a0a187f074fa"
+            planFieldType = "field"
+            planId = ""
+          }
+          defaultValue = "pool-52308"
+          displayOrder = 5
+          fieldContext = "config.customOptions"
+          fieldLabel = "Resource Pool"
+          fieldName = "resourcePool"
+          formField = true
+          refCode = "f6ef04a5-1692-4709-b421-fcf738ea1f20"
+          type = "resourcePool"
+        },
+        {
+          code = "6e09a796-1267-448f-a1cb-c0ed49298997"
+          name = "6e09a796-1267-448f-a1cb-c0ed49298997"
+          uuid = "73fbdc92-6f1a-4a1c-ae96-29276deb5d92"
+          config = {
+            cloudField = "0c320876-5e59-46e8-9d5c-43d2925d8bab"
+            cloudFieldType = "field"
+            cloudId = ""
+            defaultValue = <<EOFSCRIBE
+[
+ {
+  "rootVolume": true,
+  "name": "os",
+  "size": 11,
+  "sizeBytes": 11811160064,
+  "minStorage": 0,
+  "displayOrder": 0,
+  "storageType": 1,
+  "datastoreId": "31382"
+ },
+ {
+  "rootVolume": false,
+  "name": "data1",
+  "size": 4,
+  "sizeBytes": 4294967296,
+  "minStorage": 0,
+  "displayOrder": 1,
+  "datastoreId": 31382,
+  "storageType": 1
+ }
+]
+EOFSCRIBE
+            enableDatastoreSelection = true
+            enableDiskTypeSelection = true
+            enableStorageTypeSelection = true
+            groupField = "45d5f2cc-90e4-4917-8736-9a846b6c0d1d"
+            groupFieldType = "field"
+            groupId = ""
+            imageField = ""
+            imageId = ""
+            layoutField = "87fc38ff-4fe1-4ed9-be3a-e0cd5e20a820"
+            layoutFieldType = "field"
+            layoutId = ""
+            planField = "b455dc3a-5f0c-42d0-bd28-a0a187f074fa"
+            planFieldType = "field"
+            planId = ""
+            poolField = "f6ef04a5-1692-4709-b421-fcf738ea1f20"
+            poolFieldType = "field"
+            poolId = ""
+            virtualImageFieldType = "field"
+          }
+          displayOrder = 6
+          fieldContext = "config.customOptions"
+          fieldLabel = "Disks"
+          fieldName = "disks"
+          formField = true
+          refCode = "6e09a796-1267-448f-a1cb-c0ed49298997"
+          type = "diskManager"
+        },
+        {
+          code = "d396130c-fb3a-4790-9af7-127a6e51239d"
+          name = "d396130c-fb3a-4790-9af7-127a6e51239d"
+          uuid = "bae4a2be-1e9b-4992-aa9e-1e8b82fed62a"
+          config = {
+            cloudField = "0c320876-5e59-46e8-9d5c-43d2925d8bab"
+            cloudFieldType = "field"
+            cloudId = ""
+            defaultValue = <<EOFSCRIBE
+[
+ {
+  "primaryInterface": true,
+  "displayOrder": 0,
+  "ipMode": "",
+  "ipAddress": "",
+  "networkInterfaceTypeId": 5,
+  "networkInterfaces": [],
+  "network": {
+   "id": "network-89545"
+  }
+ }
+]
+EOFSCRIBE
+            enableIPModeSelection = true
+            groupField = "45d5f2cc-90e4-4917-8736-9a846b6c0d1d"
+            groupFieldType = "field"
+            groupId = ""
+            layoutField = "87fc38ff-4fe1-4ed9-be3a-e0cd5e20a820"
+            layoutFieldType = "field"
+            layoutId = ""
+            poolField = "f6ef04a5-1692-4709-b421-fcf738ea1f20"
+            poolFieldType = "field"
+            poolId = ""
+            showNetworkTypeSelection = true
+          }
+          displayOrder = 7
+          fieldContext = "config.customOptions"
+          fieldLabel = "Networks"
+          fieldName = "networks"
+          formField = true
+          refCode = "d396130c-fb3a-4790-9af7-127a6e51239d"
+          type = "networkManager"
+        },
+        {
+          code = "bca9dc3e-d6b7-4cc3-9de2-e1abee606c49"
+          name = "bca9dc3e-d6b7-4cc3-9de2-e1abee606c49"
+          uuid = "2b9ae197-8d69-481b-8ee7-e1a2245ef4bd"
+          config = {
+            cloudField = "0c320876-5e59-46e8-9d5c-43d2925d8bab"
+            defaultValue = "[{\"name\":\"HTTP\",\"externalPort\":\"80\",\"loadBalanceProtocol\":\"HTTP\"},{\"name\":\"HTTPS\",\"externalPort\":\"443\",\"loadBalanceProtocol\":\"HTTPS\"}]"
+            groupField = "45d5f2cc-90e4-4917-8736-9a846b6c0d1d"
+            layoutField = "87fc38ff-4fe1-4ed9-be3a-e0cd5e20a820"
+          }
+          displayOrder = 8
+          fieldContext = "config.customOptions"
+          fieldLabel = "Ports"
+          fieldName = "ports"
+          formField = true
+          refCode = "bca9dc3e-d6b7-4cc3-9de2-e1abee606c49"
+          type = "ports"
+        },
+        {
+          code = "12e12dfb-21dd-42a4-9686-35e401cc510a"
+          name = "12e12dfb-21dd-42a4-9686-35e401cc510a"
+          uuid = "44279151-b33c-4cea-8fb6-69ecfd0e978c"
+          config = {
+            cloudField = ""
+            cloudFieldType = "field"
+            cloudId = ""
+            defaultValue = "[{\"name\":\"Flash\",\"value\":\"Bang\"},{\"name\":\"Ping\",\"value\":\"Pong\"}]"
+            groupField = ""
+            groupFieldType = "field"
+            groupId = ""
+          }
+          displayOrder = 9
+          fieldContext = "config.customOptions"
+          fieldLabel = "Tags"
+          fieldName = "tags"
+          formField = true
+          refCode = "12e12dfb-21dd-42a4-9686-35e401cc510a"
+          type = "tag"
+        }
+      ]
+    }
+  ]
+  labels = [ "auto" ]
+}
