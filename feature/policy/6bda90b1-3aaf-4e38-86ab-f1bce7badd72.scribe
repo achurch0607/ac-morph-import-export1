@@ -1,0 +1,9 @@
+resource "policy" "6bda90b1-3aaf-4e38-86ab-f1bce7badd72" {
+  name = "2 inst net"
+  uuid = "6bda90b1-3aaf-4e38-86ab-f1bce7badd72"
+  config = { requiredNetworks = [ "1" ] }
+  policyHash = "0fdf12f26e9ced0642196975efc395ef9393db923e645438be6d20f6"
+  policyType = { code = "requiredNetwork" }
+  refId = 35
+  refType = "ComputeSite"
+}
