@@ -1,0 +1,7 @@
+resource "policy" "0470ec9b-cab6-494b-88ca-1c28729e3719" {
+  name = "2 cyp aces"
+  uuid = "0470ec9b-cab6-494b-88ca-1c28729e3719"
+  config = { keyPattern = "333", read = true, update = true, write = true }
+  policyHash = "d84a67503ed6548bfcf88220910976df22ad8eef26cff4d133c94389"
+  policyType = { code = "cypher" }
+}
