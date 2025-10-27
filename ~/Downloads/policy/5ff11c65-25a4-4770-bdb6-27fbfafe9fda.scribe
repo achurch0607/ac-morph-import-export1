@@ -1,0 +1,11 @@
+resource "policy" "5ff11c65-25a4-4770-bdb6-27fbfafe9fda" {
+  name = "Approval"
+  uuid = "5ff11c65-25a4-4770-bdb6-27fbfafe9fda"
+  config = { accountIntegrationId = "-100" }
+  description = "Approval"
+  enabled = false
+  policyHash = "0181e047cee1ef93993a05f0d6c02ac5ed0b3cdb740c756b3cc3d5e6"
+  policyType = { code = "provisionApproval" }
+  refId = 41
+  refType = "ComputeSite"
+}
