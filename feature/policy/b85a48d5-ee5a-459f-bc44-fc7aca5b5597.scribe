@@ -1,0 +1,9 @@
+resource "policy" "b85a48d5-ee5a-459f-bc44-fc7aca5b5597" {
+  name = "ac-name-fixed"
+  uuid = "b85a48d5-ee5a-459f-bc44-fc7aca5b5597"
+  config = { namingConflict = false, namingPattern = "", namingType = "user" }
+  policyHash = "0d2f39309c9da50e30634895ef16266c8926c9de201b96d1670b02c8"
+  policyType = { code = "naming" }
+  refId = 11
+  refType = "User"
+}
